@@ -181,6 +181,26 @@ footer a:hover {
   color: var(--tirtary-color);
 }
 
+/* CART */
+
+.cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 100px 0;
+}
+
+.cart h1 {
+  margin-bottom: 50px;
+}
+
+.orders {
+  border-radius: 10px;
+  padding: 50px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
 /* UTILITY CLASSES */
 
 .remove-list-style {
