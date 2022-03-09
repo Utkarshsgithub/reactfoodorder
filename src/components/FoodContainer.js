@@ -15,7 +15,7 @@ export default function FoodContainer() {
             <p>Your Favorite Food Is Right Below, Order Now!</p>
         </div>
         <div className="container-bottom">
-            <FoodItem itemDesc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque debitis eligendi omnis quasi vitae, repellendus nihil eius sunt in qui tenetur optio dolore?' itemName='Bread And Peanut Butter' imgSource={img1}/>
+            <FoodItem itemDesc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque debitis eligendi omnis quasi vitae, repellendus nihil eius sunt in qui tenetur optio dolore?' itemName='Peanut Butter' imgSource={img1}/>
             <FoodItem itemDesc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque debitis eligendi omnis quasi vitae, repellendus nihil eius sunt in qui tenetur optio dolore?' itemName='Fruit Salad' imgSource={img2}/>
             <FoodItem itemDesc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque debitis eligendi omnis quasi vitae, repellendus nihil eius sunt in qui tenetur optio dolore?' itemName='Straberry Milkshake' imgSource={img3}/>
             <FoodItem itemDesc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque debitis eligendi omnis quasi vitae, repellendus nihil eius sunt in qui tenetur optio dolore?' itemName='Omelette' imgSource={img4}/>

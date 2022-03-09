@@ -15,8 +15,7 @@ html {
 }
 
 *::selection {
-  color: var(--secondary-color);
-  background: var(#8ed444);
+  background-color: var(#8ed444cb);
 }
 
 body {
@@ -26,7 +25,7 @@ body {
   line-height: 30px;
 }
 
-a:active{
+a:active {
   background-color: transparent;
 }
 
@@ -68,6 +67,7 @@ a:active{
 
 .hero h1 {
   font-size: 3rem;
+  line-height: 50px;
 }
 
 .hero p {
@@ -145,8 +145,7 @@ a:active{
 }
 
 .text {
-  margin-top: 25px;
-  margin-left: 25px;
+  margin: 25px;
   border-radius: 5px;
 }
 
@@ -224,8 +223,73 @@ transition: .2s ease-in-out;
 
 /* MEDIA QUERRIES */
 
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: lightblue;
+@media only screen and (max-width: 1000px) {
+  .food-container {
+    padding: 0px;
+    box-shadow: none;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .food-item img {
+    height: 150px;
+  }
+  .food-item p {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 810px) {
+  .card {
+    padding: 50px;
+  }
+}
+
+@media only screen and (max-width: 710px) {
+  .hero h1 {
+    font-size: 2rem;
+    line-height: 35px;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin: 10px 0;
+    line-height: 25px;
+  }
+}
+
+@media only screen and (max-width: 710px) {
+  footer {
+    flex-direction: column;
+  }
+
+  footer p {
+    margin: 0;
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .hero {
+    padding: 100px 50px;
+  }
+}
+
+@media only screen and (max-width: 475px) {
+  .hero {
+    padding: 50px 25px;
+  }
+}
+
+@media only screen and (max-width: 455px) {
+  .food-item {
+    margin: 10px;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  .food-item {
+    margin: 25px;
   }
 }
