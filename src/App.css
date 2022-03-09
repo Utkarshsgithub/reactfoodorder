@@ -32,6 +32,10 @@ a:active{
 
 /* NAVBAR */
 
+.navbar h1 {
+  color: var(--tirtary-color);
+}
+
 .navbar {
   display: flex;
   padding: 30px 50px;
@@ -85,6 +89,7 @@ a:active{
   border-radius: 5px;
   cursor: pointer;
   color: #111;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* FOOD CONTAINER */
@@ -92,6 +97,8 @@ a:active{
 .food-container {
   margin: 100px;
   padding: 50px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 15px;
 }
 
 .container-top {
@@ -99,6 +106,79 @@ a:active{
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.container-top h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: var(--tirtary-color);
+}
+
+.container-bottom {
+  margin-top: 50px;
+  padding: 25px 0;
+  background: rgb(250, 250, 250);
+}
+
+.food-item {
+  display: flex;
+  margin: 50px;
+  background-color: #fff;
+}
+
+.food-item:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.food-item p {
+  width: 400px;
+  border-radius: 5px;
+}
+
+.food-item h1 {
+  color: var(--tirtary-color);
+}
+
+.food-item img {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.text {
+  margin-top: 25px;
+  margin-left: 25px;
+  border-radius: 5px;
+}
+
+.btn-atc {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bolder;
+  background: rgb(245, 245, 245);
+  font-family: 'Poppins', sans-serif;
+  margin-top: 15px;
+  cursor: pointer;
+  border: 1px solid var(--secondary-color);
+}
+
+.btn-atc:hover {
+  background-color: var(--tirtary-color);
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background: rgb(245, 245, 245);
+}
+
+footer p {
+  margin: 25px;
+}
+
+footer a:hover {
+  color: var(--tirtary-color);
 }
 
 /* UTILITY CLASSES */

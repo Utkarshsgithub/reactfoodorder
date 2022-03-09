@@ -1,12 +1,13 @@
 import React from 'react'
 
-export default function FoodItem() {
+export default function FoodItem({ imgSource, itemName, itemDesc }) {
   return (
-    <div className='food-item'>
-        <img src="" alt="" />
+    <div className='food-item transition'>
+        <img src={imgSource} alt="Food item on bhojan" height='250px' />
         <div className="text">
-            <h1>Salad</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam voluptate distinctio minima eius, in facilis accusantium sit impedit provident, beatae voluptates at odio.</p>
+            <h1>{itemName}</h1>
+            <p>{itemDesc}</p>
+            <button className="btn-atc">Add To Cart</button>
         </div>
     </div>
   )
