@@ -14,15 +14,15 @@ html {
   --tirtary-color: #8ed444;
 }
 
-::selection {
-  color: var(--primary-color);
-  background: var(--secondary-color);
+*::selection {
+  color: var(--secondary-color);
+  background: var(#8ed444);
 }
 
 body {
   background: var(--primary-color);
   color: var(--secondary-color);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Poppins', sans-serif;
   line-height: 30px;
 }
 
@@ -30,19 +30,96 @@ a:active{
   background-color: transparent;
 }
 
+/* NAVBAR */
+
+.navbar {
+  display: flex;
+  padding: 30px 50px;
+  position: sticky;
+  top: 0;
+  background: var(--primary-color);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.navbar ul {
+  display: flex;
+  margin-left: auto;
+}
+
+.navbar ul li {
+  margin: 0 25px;
+  cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+  padding: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80') no-repeat;
+  background-size: cover;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  margin: 25px 0;
+  font-size: 1.3rem;
+}
+
+.card {
+  padding: 100px;
+  background-color: rgba(255, 255, 255, 0.658);
+  border-radius: 10px;
+}
+
+.btn {
+  padding: 15px 20px;
+  border: none;
+  font-size: large;
+  background-color: var(--tirtary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  color: #111;
+}
+
+/* FOOD CONTAINER */
+
+.food-container {
+  margin: 100px;
+  padding: 50px;
+}
+
+.container-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 /* UTILITY CLASSES */
 
-.remove_list_style {
+.remove-list-style {
 list-style: none;
 }
 
-.remove_link_style {
+.remove-link-style {
 text-decoration: none;
 color: inherit;
 }
 
-.trans2s {
+.transition {
 transition: .2s ease-in-out;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* MEDIA QUERRIES */
