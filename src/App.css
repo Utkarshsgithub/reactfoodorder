@@ -290,6 +290,25 @@ transition: .2s ease-in-out;
 
 @media only screen and (max-width: 460px) {
   .food-item {
-    margin: 5px;
+    margin: 20px 5px;
+  }
+}
+
+@media only screen and (max-width: 415px) {
+  .food-item img {
+    height: 130px;
+  }
+  .text {
+    margin: 10px;
+  }
+  .text h1 {
+    font-size: 1.3rem;
+    line-height: 23px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .card h1 {
+    font-size: 1.5rem;
   }
 }
