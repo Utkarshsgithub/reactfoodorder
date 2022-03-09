@@ -282,14 +282,14 @@ transition: .2s ease-in-out;
   }
 }
 
-@media only screen and (max-width: 455px) {
-  .food-item {
-    margin: 10px;
-  }
-}
-
 @media only screen and (max-width: 510px) {
   .food-item {
     margin: 25px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .food-item {
+    margin: 5px;
   }
 }
