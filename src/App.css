@@ -155,7 +155,6 @@ a:active {
   font-weight: bolder;
   background: rgb(245, 245, 245);
   font-family: 'Poppins', sans-serif;
-  margin-top: 15px;
   cursor: pointer;
   border: 1px solid var(--secondary-color);
 }
@@ -198,6 +197,15 @@ footer a:hover {
   border-radius: 10px;
   padding: 50px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.atc-area {
+  display: flex;
+  margin-top: 15px;
+}
+
+.atc-area p {
+  color: var(--tirtary-color);
 }
 
 /* UTILITY CLASSES */
@@ -273,6 +281,10 @@ transition: .2s ease-in-out;
 @media only screen and (max-width: 575px) {
   .hero {
     padding: 100px 50px;
+  }
+  .navbar {
+    padding: 30px 0px;
+    padding-left: 25px;
   }
 }
 

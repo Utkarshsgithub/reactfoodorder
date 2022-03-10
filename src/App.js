@@ -10,19 +10,17 @@ function App() {
   return (
     <>
       <Router>
+        <Navbar />
         <Switch>
           <Route exact path="/cart">
-            <Navbar />
             <Cart />
-            <Footer />
           </Route>
           <Route exact path="/">
-            <Navbar />
             <Hero />
             <FoodContainer />
-            <Footer />
           </Route>
         </Switch>
+        <Footer />
       </Router>
     </>
   );
