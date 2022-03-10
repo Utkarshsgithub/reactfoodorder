@@ -229,6 +229,16 @@ transition: .2s ease-in-out;
   justify-content: center;
 }
 
+.ordered-item {
+  display: flex;
+  width: 500px;
+  justify-content: space-between;
+}
+
+hr {
+  margin: 25px 0;
+}
+
 /* MEDIA QUERRIES */
 
 @media only screen and (max-width: 1000px) {

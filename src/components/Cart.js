@@ -11,7 +11,6 @@ export default function Cart() {
         <h1>Your Cart</h1>
         <div className="orders">
           <Order amount={amount} />
-          <hr />
           <h1>${amount}</h1>
         </div>
       </div>

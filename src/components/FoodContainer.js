@@ -15,11 +15,11 @@ export default function FoodContainer() {
             <p>Your Favorite Food Is Right Below, Order Now!</p>
         </div>
         <div className="container-bottom">
-            <FoodItem price={16} itemDesc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque debitis eligendi omnis quasi vitae, repellendus nihil eius sunt in qui tenetur optio dolore?' itemName='Peanut Butter' imgSource={img1}/>
-            <FoodItem price={22} itemDesc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque debitis eligendi omnis quasi vitae, repellendus nihil eius sunt in qui tenetur optio dolore?' itemName='Fruit Salad' imgSource={img2}/>
-            <FoodItem price={52} itemDesc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque debitis eligendi omnis quasi vitae, repellendus nihil eius sunt in qui tenetur optio dolore?' itemName='Straberry Milkshake' imgSource={img3}/>
-            <FoodItem price={19} itemDesc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque debitis eligendi omnis quasi vitae, repellendus nihil eius sunt in qui tenetur optio dolore?' itemName='Omelette' imgSource={img4}/>
-            <FoodItem price={10} itemDesc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque debitis eligendi omnis quasi vitae, repellendus nihil eius sunt in qui tenetur optio dolore?' itemName='Green Salad' imgSource={img5}/>
+            <FoodItem quantity={0} price={16} itemDesc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque debitis eligendi omnis quasi vitae, repellendus nihil eius sunt in qui tenetur optio dolore?' itemName='Peanut Butter' imgSource={img1}/>
+            <FoodItem quantity={0} price={22} itemDesc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque debitis eligendi omnis quasi vitae, repellendus nihil eius sunt in qui tenetur optio dolore?' itemName='Fruit Salad' imgSource={img2}/>
+            <FoodItem quantity={0} price={52} itemDesc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque debitis eligendi omnis quasi vitae, repellendus nihil eius sunt in qui tenetur optio dolore?' itemName='Straberry Milkshake' imgSource={img3}/>
+            <FoodItem quantity={0} price={19} itemDesc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque debitis eligendi omnis quasi vitae, repellendus nihil eius sunt in qui tenetur optio dolore?' itemName='Omelette' imgSource={img4}/>
+            <FoodItem quantity={0} price={10} itemDesc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque debitis eligendi omnis quasi vitae, repellendus nihil eius sunt in qui tenetur optio dolore?' itemName='Green Salad' imgSource={img5}/>
         </div>
       </section>
     </div>
