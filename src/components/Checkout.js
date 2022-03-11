@@ -49,7 +49,7 @@ function Checkout() {
                 <input value={userData.address} onChange={postUserData} type="text" id='address' name='address' placeholder='Address' required />
                 <input value={userData.number} onChange={postUserData} type="number" id='number' name='number' placeholder='Mobile Number' required />
                 <input value={userData.pincode} onChange={postUserData} type="number" id='pincode' name='pincode'placeholder='Pincode' required />
-                <button className='btn-od' type='submit' onSubmit={submitData}>Order Done!</button>
+                <button className='btn-od' type='submit' onClick={submitData}>Order Done!</button>
             </form>
         </div>
     </div>
