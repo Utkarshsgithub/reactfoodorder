@@ -20,7 +20,7 @@ function App() {
             <Hero />
             <FoodContainer />
           </Route>
-          <Route exact path="/">
+          <Route exact path="/checkout">
             <Checkout />
           </Route>
         </Switch>

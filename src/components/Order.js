@@ -16,12 +16,10 @@ export default function Order({ amount }) {
   const {increaseTotalAmount, decreaseTotalAmount} = bindActionCreators(actionCreators, dispatch)
 
   function increaseQuantity(price) {
-    quantity.current.value += 1
     increaseTotalAmount(price)
   }
 
   function decreaseQuantity(price) {
-    quantity -= 1
     decreaseTotalAmount(price)
   }
 
@@ -44,8 +42,8 @@ export default function Order({ amount }) {
             <h2>{key}</h2>
             <div style={{'display':'flex'}}>
               <button className="btn" onClick={()=>increaseQuantity(product[key])} >+</button>
-              <input id="quantitiy" type="tel" ref={quantity} value={1} />
-              <Link className="remove-link-style" to='/checkout'><button onClick={()=>decreaseQuantity(product[key])} className="btn">-</button></Link>
+              <input className="quantity" type="tel" ref={quantity} />
+              <button onClick={()=>decreaseQuantity(product[key])} className="btn">-</button>
             </div>
             <h2 style={{'color':'var(--tirtary-color)'}}>${product[key]}</h2>
           </div>

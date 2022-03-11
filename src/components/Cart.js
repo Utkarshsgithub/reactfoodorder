@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import Order from "./Order";
 
 export default function Cart() {
@@ -13,7 +14,7 @@ export default function Cart() {
           <Order amount={amount} />
           <div className="checkout">
             <h1 style={{'color':'var(--tirtary-color)'}}>${amount}</h1>
-            <button className="btn-co">Checkout</button>
+            <Link className='remove-link-style' to='/checkout'><button className="btn-co">Checkout</button></Link>
           </div>
         </div>
       </div>
