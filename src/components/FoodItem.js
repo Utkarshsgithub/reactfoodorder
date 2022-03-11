@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { actionCreators } from '../state/index'
 
 export default function FoodItem({ imgSource, itemName, itemDesc, price, quantity }) {
+
+  const [btnText, setBtnText] = useState('Add To Cart')
 
   const dispatch = useDispatch();
 
@@ -12,10 +14,15 @@ export default function FoodItem({ imgSource, itemName, itemDesc, price, quantit
   const product = useSelector((state) => state.product);
 
   function addedToCart () {
+    if (product.hasOwnProperty(itemName)) {
+      setBtnText('Check Cart')
+    } else {
     increaseTotalAmount(price)
     addProduct(itemName, price)
-    quantity += 1
     console.log(product)
+    quantity += 1
+    setBtnText('Added')
+    }
   }
 
   return (
@@ -26,7 +33,7 @@ export default function FoodItem({ imgSource, itemName, itemDesc, price, quantit
             <p>{itemDesc}</p>
             <div className="atc-area">
               <p>${price}</p>
-              <button onClick={()=>(addedToCart())} className="btn-atc">Add To Cart</button>
+                <button onClick={()=>addedToCart()} className="btn-atc">{btnText}</button>
             </div>
         </div>
     </div>
