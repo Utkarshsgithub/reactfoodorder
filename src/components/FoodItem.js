@@ -17,11 +17,11 @@ export default function FoodItem({ imgSource, itemName, itemDesc, price, quantit
     if (product.hasOwnProperty(itemName)) {
       setBtnText('Check Cart')
     } else {
-    increaseTotalAmount(price)
-    addProduct(itemName, price)
-    console.log(product)
-    quantity += 1
-    setBtnText('Added')
+      increaseTotalAmount(price)
+      addProduct(itemName, price)
+      console.log(product)
+      quantity += 1
+      setBtnText('Added')
     }
   }
 

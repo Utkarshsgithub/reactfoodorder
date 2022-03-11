@@ -8,10 +8,13 @@ export default function Cart() {
   return (
     <>
       <div className="cart">
-        <h1>Your Cart</h1>
+        <h1 style={{'marginBottom':'25px'}}>Your Cart</h1>
         <div className="orders">
           <Order amount={amount} />
-          <h1>${amount}</h1>
+          <div className="checkout">
+            <h1 style={{'color':'var(--tirtary-color)'}}>${amount}</h1>
+            <button className="btn-co">Checkout</button>
+          </div>
         </div>
       </div>
     </>

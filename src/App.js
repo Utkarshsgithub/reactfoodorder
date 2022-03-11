@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Cart from "./components/Cart";
 import Footer from "./components/Footer";
+import Checkout from "./components/Checkout";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
           <Route exact path="/">
             <Hero />
             <FoodContainer />
+          </Route>
+          <Route exact path="/">
+            <Checkout />
           </Route>
         </Switch>
         <Footer />

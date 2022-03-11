@@ -190,7 +190,7 @@ footer a:hover {
 }
 
 .cart h1 {
-  margin-bottom: 50px;
+  margin-bottom: 0px;
 }
 
 .orders {
@@ -237,6 +237,30 @@ transition: .2s ease-in-out;
 
 hr {
   margin: 25px 0;
+}
+
+.checkout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.btn-co {
+  padding: 15px 20px;
+  background-color: transparent;
+  border: 2px solid var(--tirtary-color);
+  border-radius: 25px;
+  color: var(--tirtary-color);
+  font-size: large;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color .2s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-co:hover {
+  background-color: var(--tirtary-color);
+  color: var(--secondary-color);
 }
 
 /* MEDIA QUERRIES */
