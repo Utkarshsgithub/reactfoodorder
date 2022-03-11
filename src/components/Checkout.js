@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
 
-function Checkout(props) {
+function Checkout() {
     const [userData, setUserData] = useState({
         name:"",
         address:"",
-        number: null,
-        pincode: null
+        number: undefined,
+        pincode: undefined
     })
     let name, value;
     const postUserData = (event) => {
@@ -44,13 +43,13 @@ function Checkout(props) {
   return (
     <div className="center">
         <div className="checkout-page">
-            <h1 class='center' style={{'margin':'25px 0px'}}>Checkout</h1>
+            <h1 className='center' style={{'margin':'25px 0px'}}>Checkout</h1>
             <form method="POST" >
                 <input value={userData.name} onChange={postUserData} type="text" id='name' name='name' placeholder='Name' required />
                 <input value={userData.address} onChange={postUserData} type="text" id='address' name='address' placeholder='Address' required />
                 <input value={userData.number} onChange={postUserData} type="number" id='number' name='number' placeholder='Mobile Number' required />
                 <input value={userData.pincode} onChange={postUserData} type="number" id='pincode' name='pincode'placeholder='Pincode' required />
-                <button class='btn-od' type='submit' onClick={submitData}>Order Done!</button>
+                <button className='btn-od' type='submit' onClick={submitData}>Order Done!</button>
             </form>
         </div>
     </div>

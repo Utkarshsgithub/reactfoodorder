@@ -37,7 +37,7 @@ export default function Order({ amount }) {
 
         Object.keys(product).map(key =>
         
-        <>
+        <div key={product[key]}>
           <div className="ordered-item">
             <h2>{key}</h2>
             <div style={{'display':'flex'}}>
@@ -48,7 +48,7 @@ export default function Order({ amount }) {
             <h2 style={{'color':'var(--tirtary-color)'}}>${product[key]}</h2>
           </div>
           <hr />
-        </>
+        </div>
         )
       )
 
