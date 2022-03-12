@@ -1,27 +1,11 @@
-import React, { useRef } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { useDispatch } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import { actionCreators } from '../state/index'
+import AddedProduct from "./AddedProduct";
 
 export default function Order({ amount }) {
 
   const product = useSelector((state) => state.product);
-
-  const quantity = useRef(1)
-
-  const dispatch = useDispatch();
-
-  const {increaseTotalAmount, decreaseTotalAmount} = bindActionCreators(actionCreators, dispatch)
-
-  function increaseQuantity(price) {
-    increaseTotalAmount(price)
-  }
-
-  function decreaseQuantity(price) {
-    decreaseTotalAmount(price)
-  }
 
   return (
     <>
@@ -36,19 +20,19 @@ export default function Order({ amount }) {
       ) : (
 
         Object.keys(product).map(key =>
-        
-        <div key={product[key]}>
-          <div className="ordered-item">
-            <h2>{key}</h2>
-            <div style={{'display':'flex'}}>
-              <button className="btn" onClick={()=>increaseQuantity(product[key])} >+</button>
-              <input className="quantity" type="tel" ref={quantity} />
-              <button onClick={()=>decreaseQuantity(product[key])} className="btn">-</button>
-            </div>
-            <h2 style={{'color':'var(--tirtary-color)'}}>${product[key]}</h2>
-          </div>
-          <hr />
-        </div>
+          <AddedProduct name={key} price={product[key]}/>
+        // <div key={product[key]}>
+        //   <div className="ordered-item">
+        //     <h2>{key}</h2>
+        //     <div style={{'display':'flex'}}>
+        //       <button className="btn" onClick={()=>increaseQuantity(product[key])} >+</button>
+        //       <input onChange={(e)=>{quantity.current.value = 2}} className="quantity" type="number" ref={quantity} value={qty} />
+        //       <button onClick={()=>decreaseQuantity(product[key])} className="btn">-</button>
+        //     </div>
+        //     <h2 style={{'color':'var(--tirtary-color)'}}>${product[key]}</h2>
+        //   </div>
+        //   <hr />
+        // </div>
         )
       )
 

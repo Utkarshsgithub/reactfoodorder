@@ -9,7 +9,7 @@ export default function FoodItem({ imgSource, itemName, itemDesc, price, quantit
 
   const dispatch = useDispatch();
 
-  const {increaseTotalAmount, decreaseTotalAmount, addProduct} = bindActionCreators(actionCreators, dispatch)
+  const {increaseTotalAmount, addProduct} = bindActionCreators(actionCreators, dispatch)
 
   const product = useSelector((state) => state.product);
 

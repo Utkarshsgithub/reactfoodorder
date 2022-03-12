@@ -5,9 +5,9 @@ const reducer = (state={}, action) => {
     if (action.type==='add') {
         state[name] = price;
     }
-    // else if (action.type==='remove') {
-    //     return state - action.payload
-    // }
+    else if (action.type==='remove') {
+        return delete state.action.payload
+    } 
     return state;
 }
 
