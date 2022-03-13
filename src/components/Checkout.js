@@ -1,13 +1,23 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux';
+import { bindActionCreators } from 'redux'
+import { actionCreators } from '../state/index'
 
 function Checkout({ setProgress }) {
+
+    const dispatch = useDispatch();
+
+    const { zeroTotalAmount, removeAllProducts } = bindActionCreators(actionCreators, dispatch)
+
     const [userData, setUserData] = useState({
         name:"",
         address:"",
         number: undefined,
         pincode: undefined
     })
+
     let name, value;
+
     const postUserData = (event) => {
         name = event.target.name
         value = event.target.value
@@ -36,6 +46,8 @@ function Checkout({ setProgress }) {
         )
         setProgress(100)
         if (res) {
+            zeroTotalAmount(0)
+            removeAllProducts()
             alert("Data Stored In Firebase")
         } else {
             alert ("Error Submitting The Data")

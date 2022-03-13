@@ -39,7 +39,7 @@ export default function AddedProduct({ name, price }) {
     <div key={price}>
       <div className="ordered-item">
         <h2>{name}</h2>
-        <div style={{ display: "flex" }}>
+        <div style={{ display: "flex", 'margin': '10px' }}>
           <button className="btn" onClick={() => increaseQuantity(price)}>
             +
           </button>
@@ -48,7 +48,7 @@ export default function AddedProduct({ name, price }) {
             type="number"
             ref={quantity}
             value={qty}
-            onChange={null}
+            onChange={undefined}
           />
           <button onClick={() => decreaseQuantity(price, name)} className="btn">
             -

@@ -234,6 +234,7 @@ footer a:hover {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-left: 25px;
 }
 
 /* UTILITY CLASSES */
@@ -296,9 +297,9 @@ hr {
 
 .quantity {
   width: 50px;
-  padding: 10%;
   margin: 0px 5px;
   border-radius: 5px;
+  padding-left: 16px;
 }
 
 /* MEDIA QUERRIES */

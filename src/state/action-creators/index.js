@@ -16,6 +16,15 @@ export const decreaseTotalAmount = (amount) => {
     }
 }
 
+export const zeroTotalAmount = (amount) => {
+    return (dispatch) => {
+        dispatch({
+            type: 'zero',
+            payload: amount
+        })
+    }
+}
+
 export const addProduct = (name, price) => {
     return (dispatch) => {
         dispatch({
@@ -31,6 +40,14 @@ export const removeProduct = (name) => {
         dispatch({
             type: 'remove',
             payload: name
+        })
+    }
+}
+
+export const removeAllProducts = () => {
+    return (dispatch) => {
+        dispatch({
+            type: 'removeAll'
         })
     }
 }

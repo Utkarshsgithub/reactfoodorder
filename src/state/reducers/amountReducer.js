@@ -5,6 +5,9 @@ const reducer = (state=0, action) => {
     else if (action.type==='decrease') {
         return state - action.payload
     }
+    else if (action.type==='zero') {
+        return state * action.payload
+    }
     else {
         return state;
     }
