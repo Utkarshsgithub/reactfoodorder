@@ -6,7 +6,10 @@ import img3 from '../images/item3.jpg'
 import img4 from '../images/item4.jpg'
 import img5 from '../images/item5.jpg'
 
-export default function FoodContainer() {
+export default function FoodContainer({ setProgress }) {
+
+  setProgress(20)
+  
   return (
     <div className="center">
       <section className="food-container">
@@ -18,10 +21,12 @@ export default function FoodContainer() {
             <FoodItem quantity={0} price={16} itemDesc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque debitis eligendi omnis quasi vitae, repellendus nihil eius sunt in qui tenetur optio dolore?' itemName='Peanut Butter' imgSource={img1}/>
             <FoodItem quantity={0} price={22} itemDesc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque debitis eligendi omnis quasi vitae, repellendus nihil eius sunt in qui tenetur optio dolore?' itemName='Fruit Salad' imgSource={img2}/>
             <FoodItem quantity={0} price={52} itemDesc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque debitis eligendi omnis quasi vitae, repellendus nihil eius sunt in qui tenetur optio dolore?' itemName='Straberry Milkshake' imgSource={img3}/>
+            { setProgress(50) }
             <FoodItem quantity={0} price={19} itemDesc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque debitis eligendi omnis quasi vitae, repellendus nihil eius sunt in qui tenetur optio dolore?' itemName='Omelette' imgSource={img4}/>
             <FoodItem quantity={0} price={10} itemDesc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque debitis eligendi omnis quasi vitae, repellendus nihil eius sunt in qui tenetur optio dolore?' itemName='Green Salad' imgSource={img5}/>
         </div>
       </section>
+      {setProgress(100)}
     </div>
   );
 }

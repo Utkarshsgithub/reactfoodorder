@@ -6,22 +6,31 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Cart from "./components/Cart";
 import Footer from "./components/Footer";
 import Checkout from "./components/Checkout";
+import LoadingBar from 'react-top-loading-bar'
+import { useState } from "react";
 
 function App() {
+
+  const [progress, setProgress] = useState(0)
+
   return (
     <>
       <Router>
+      <LoadingBar
+        color='#8ed444'
+        progress={progress}
+      />
         <Navbar />
         <Switch>
           <Route exact path="/cart">
-            <Cart />
+            <Cart setProgress={setProgress} />
           </Route>
           <Route exact path="/">
             <Hero />
-            <FoodContainer />
+            <FoodContainer setProgress={setProgress} />
           </Route>
           <Route exact path="/checkout">
-            <Checkout />
+            <Checkout setProgress={setProgress} />
           </Route>
         </Switch>
         <Footer />

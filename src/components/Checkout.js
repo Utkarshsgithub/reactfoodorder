@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function Checkout() {
+function Checkout({ setProgress }) {
     const [userData, setUserData] = useState({
         name:"",
         address:"",
@@ -16,6 +16,7 @@ function Checkout() {
     }
 
     const submitData = async (event) => {
+        setProgress(80)
         event.preventDefault();
         const { name, address, number, pincode } = userData
         const res = await fetch(
@@ -33,6 +34,7 @@ function Checkout() {
             })
         }
         )
+        setProgress(100)
         if (res) {
             alert("Data Stored In Firebase")
         } else {
